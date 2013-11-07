@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>SelectedPapers.net</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/arXiv.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/spnet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/css/spnet.css" /> -->
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,Safe"></script>
 </head>
 
@@ -63,9 +63,14 @@
     Recommended For You</h3>
     <ol>
         {% for r in recs %}
-        <li><a href="/people/{{- r['from'] -}}" title="Click to view the person who wrote this recommendation"> {{ r['name'] }}</a>:
-        <a href="/posts/{{- r['post'] -}}" title="Click to view this post"> {{ r['title'] }}</a> for:
-        {% for topic in r['topics'] %}<a href="/topics/{{- topic -}}"> {{ '#' + topic }}</a> {% endfor %}
+        <li>
+            <a href="/posts/{{- r['post'] -}}" title="Click to view this post"> {{ r['title'] }}</a></br>
+            by
+            <a href="/people/{{- r['from'] -}}" title="Click to view the person who wrote this recommendation"><span class="label label-danger">{{ r['name'] }}</span></a>
+        for
+        {% for topic in r['topics'] %}
+            <a href="/topics/{{- topic -}}"><span class="label label-primary">{{ '#' + topic }}</span></a> 
+        {% endfor %} 
         ( {{- display_datetime(r['published']) -}} )
         </li>
         {% endfor %}
