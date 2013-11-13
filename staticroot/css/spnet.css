@@ -1,8 +1,3 @@
-body {
-    background-color: #e5e5e5;
-    font-size: larger;
-}
-
 #body_container {
     padding: 1%;
 }
@@ -12,8 +7,6 @@ body {
     padding-right: 1%;
     padding-bottom: 1%;
     margin-top: 1%;
-    border: thin gray solid;
-    background-color: white;
 }
 
 h2 {
@@ -24,9 +17,6 @@ h2 {
     padding: 1%;
     margin-top: 1%;
     margin-bottom: 1%;
-    border-bottom: thin black dashed;
-    border: thin #B31B1B solid;
-    background-color: white;
 }
 
 .indent {

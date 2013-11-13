@@ -1,3 +1,4 @@
 # ignore build documentation
 
 doc/_build
+*.pyc
